@@ -13,11 +13,9 @@ A dynamic programming solution for this problem has the following reccurrence eq
 
 F(i,0) = 0 0 ≤ *i* ≤ |**P**|
 
-
 F(0,j) = 1 0 ≤ *j* ≤ |**D**|
 
 F(i,j-1) + F(i-1,j-1) if D[j] is equal to P[i]
-
 
 F(i,j) = F(i,j-1) if D[j] is not equal to P[i]
 
