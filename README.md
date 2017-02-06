@@ -12,9 +12,13 @@ For example, if **P** is **AT** and **D** is **AGTATCCTGTA**, **P** occurs as a 
 A dynamic programming solution for this problem has the following reccurrence equation, where F(*i,j*) shows the number of occurrences of the first *i* characters of **P** as a sub-sequence of the first *j* characters of **D**:
 
 F(i,0) = 0 0 ≤ *i* ≤ |**P**|
+
+
 F(0,j) = 1 0 ≤ *j* ≤ |**D**|
 
 F(i,j-1) + F(i-1,j-1) if D[j] is equal to P[i]
+
+
 F(i,j) = F(i,j-1) if D[j] is not equal to P[i]
 
 Since F can grow very quickly to very large numbers for certain **P** and **D**, only 5 digits of the computed are used. In other words, we are only be interested in F(|**P**|,|**D**|) % 100000.
